@@ -6,17 +6,16 @@
 	$address=$_POST['address'];
 	$sex=$_POST['sex'];
 	if($pw!=$pwc){
-	echo "비밀번호 확인";
+	echo "double check password";
 	echo "<a href=signup.html>back page</a>";
 	exit();
 	}
 	if($id==NULL||$pw==NULL||$email==NULL||$sex==NULL){
-	echo "반칸 채워";
+	echo "fill blanks";
 	echo "<a href=signup.html>back page</a>";
 	exit();
 	}
-	$conn=mysqli_connect("127.0.0.1","root","admin","hackerlogin")
-	or die('conn fail');
+	$conn=mysqli_connect("127.0.0.1","root","admin","hackerlogin")or die('conn fail');
 	if($conn==false){
 		echo "fail";
 		exit();
